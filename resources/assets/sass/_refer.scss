@@ -1,0 +1,78 @@
+#refer {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%), url('../img/background2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    .subheader {
+        position: fixed;
+        top: 8rem;
+        text-align: center;
+        color: white;
+        width: 100%;
+        h1 {
+            font-size: 4rem;
+            font-family: 'Pacifico', cursive;
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        .content {
+            width: 80%;
+            form {
+                margin-top: 10rem;
+                .form-group {
+                    position: relative;
+                    .form-control {
+                        background-color: transparent;
+                        border: 0;
+                        border-radius: 0;
+                        box-shadow: 0 2px 0 0 white;
+                        color: white;
+                        font-size: 1.5rem;
+                        &::placeholder {
+                            color: white;
+                        }
+                        &:focus,
+                        &:hover {
+                            background-color: rgba(255,255,255,0.3);
+                        }
+                        &:focus:required:invalid {
+                            box-shadow: 0 2px 0 0 rgb(244,67,54);;
+                        }
+                        &:focus:required:valid {
+                            box-shadow: 0 2px 0 0 rgb(76,175,80);
+                        }
+                    }
+                    .btn[type="submit"] {
+                        position: absolute;
+                        top: 0.5rem;
+                        right: 0.75rem;
+                        font-size: 0.8rem;
+                        background-color: #1B5E20;
+                        color: white;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .alert {
+                color: white;
+                text-align: center;
+                padding: 0.5rem;
+                border: 0;
+                &.alert-success {
+                    background-color: rgba(76,175,80,0.5);
+                }
+                &.alert-danger {
+                    background-color: rgba(244,67,54,0.5);
+                }
+            }
+        }
+    }
+}
