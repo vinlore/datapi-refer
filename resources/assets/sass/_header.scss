@@ -14,12 +14,18 @@
         img {
             max-height: 4rem;
         }
+        @media (max-width:500px) {
+            float: none;
+        }
     }
     .phone {
         float: right;
         padding: 1rem;
         a {
             font-size: 1.2rem;
+        }
+        @media (max-width:500px) {
+            display: none;
         }
     }
 }

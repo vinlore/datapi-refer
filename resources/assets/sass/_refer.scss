@@ -1,4 +1,8 @@
 #refer {
+    @media (max-width:500px) {
+        margin-top: 3.5rem;
+        font-size: 0.5rem;
+    }
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%), url('../img/background2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,7 +12,7 @@
     align-items: center;
     flex-flow: column nowrap;
     .subheader {
-        position: fixed;
+        position: block;
         top: 8rem;
         text-align: center;
         color: white;
@@ -23,8 +27,15 @@
         justify-content: center;
         .content {
             width: 80%;
+            .text-block {
+                margin-top: 3rem;
+                color: white;
+                h6 {
+                    margin-top: 1rem;
+                }
+            }
             form {
-                margin-top: 10rem;
+                margin-top: 2rem;
                 .form-group {
                     position: relative;
                     .form-control {
@@ -47,17 +58,25 @@
                         &:focus:required:valid {
                             box-shadow: 0 2px 0 0 rgb(76,175,80);
                         }
-                    }
-                    .btn[type="submit"] {
-                        position: absolute;
-                        top: 0.5rem;
-                        right: 0.75rem;
-                        font-size: 0.8rem;
-                        background-color: #1B5E20;
-                        color: white;
-                        &:hover {
-                            cursor: pointer;
+                        @media (max-width:500px) {
+                            font-size: 1rem !important;
+                            &#friend {
+                                margin-top: 1rem;
+                            }
                         }
+                    }
+                }
+                .btn[type="submit"] {
+                    font-size: 0.8rem;
+                    background-color: #1B5E20;
+                    color: white;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    float: right;
+                    @media (max-width:500px) {
+                        float: none;
+                        width: 100%;
                     }
                 }
             }
